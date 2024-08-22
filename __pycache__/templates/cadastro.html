@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        {% if mensagem %}
+            <div id="mensagem_cadastro" style="color: red;">
+                {{ mensagem }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div>
+    <form action="{{cadastrar}}" method="POST">
+        <label>Usuário: </label>
+        <input type="text" name="novo_usuario">
+        <label>Email: </label>
+        <input type="text" name="novo_email">
+        <label>Senha: </label>
+        <input type="text" name="nova_senha">
+        <button type="submit">Cadastrar</button>
+    </form>
+    </div>
+
+
+
+</body>
+</html>
